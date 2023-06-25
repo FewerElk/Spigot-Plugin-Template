@@ -1,0 +1,33 @@
+main: country.author.templateplugin.Plugin
+name: TemplatePlugin
+version: '1.0'
+description: A template plugin for spigot
+load: POSTWORLD
+author: author
+website: spigotmc.org
+prefix: Template
+depend:
+- WorldEdit
+- Towny
+softdepend:
+- FAWE
+loadbefore:
+- Essentials
+commands:
+  cmd1:
+    description: descrption here
+    aliases:
+    - acmd
+    - command1
+    permission: template.cmd1
+    permission-message: You do not have permission!
+    usage: /<command> [test|stop]
+permissions:
+  template.cld1:
+    description: Allows foo command
+    default: op
+  test.*:
+    description: Wildcard permission
+    default: op
+    children:
+      test.foo: true
